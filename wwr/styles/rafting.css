@@ -97,21 +97,38 @@ footer a:hover {
 }
 .hero {
   position: relative;
-  text-align: center;
 }
 
 .hero img {
+  display: block;
   width: 100%;
   height: auto;
 }
 
 .hero h1 {
   position: absolute;
-  top: 50%;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(#aad4ff);
+  color: #fff;
+}
+.hero article {
+  position: absolute;
+  top: 25%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
   color: white;
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 10px;
+  width: 80%;
+  max-width: 1000px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.hero article img {
+  float: right;
+  width: 125px;
 }
