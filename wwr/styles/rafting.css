@@ -1,23 +1,48 @@
+:root {
+  --primary-color: #004e89;
+  --secondary-color: #68a7ad;
+  --accent1-color: #aad4ff;
+  --accent2-color: #f4f4f4;
+  --highlight-color: #e63946;
+
+  --heading-font: 'Merriweather', serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--body-font);
   line-height: 1.6;
-  background-color: #f4f4f4;
+  background-color: var(--accent2-color);
   color: #333;
 }
 
 header {
-  background-color: #004e89;
+  background-color: var(--primary-color);
   color: white;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 header img {
@@ -29,9 +54,11 @@ nav a {
   text-decoration: none;
   margin-left: 1rem;
   font-weight: bold;
+  transition: color 0.3s ease;
 }
 
 nav a:hover {
+  color: var(--highlight-color);
   text-decoration: underline;
 }
 
@@ -41,29 +68,44 @@ main {
   margin: 0 auto;
   background-color: white;
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 h1, h2 {
-  font-family: 'Merriweather', serif;
-  color: #004e89;
+  font-family: var(--heading-font);
+  color: var(--primary-color);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
-.history, .image-text, .adventures {
+.history,
+.image-text,
+.adventures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  align-items: center;
   margin-bottom: 2rem;
+}
+
+.history img,
+.image-text img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
   align-items: center;
 }
 
 .grid img {
   width: 100%;
   border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .adventures ul {
@@ -72,31 +114,41 @@ h1, h2 {
 }
 
 .adventures li {
-  background-color: #cce5ff;
-  margin-bottom: 0.5rem;
-  padding: 0.75rem;
-  border-left: 5px solid #004e89;
-  border-radius: 4px;
+  background-color: var(--accent1-color);
+  margin-bottom: 0.75rem;
+  padding: 1rem;
+  border-left: 5px solid var(--primary-color);
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+.adventures li:hover {
+  background-color: var(--secondary-color);
+  color: white;
 }
 
 footer {
-  background-color: #004e89;
+  background-color: var(--primary-color);
   color: white;
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1.5rem;
+  margin-top: 3rem;
 }
 
 footer a {
-  color: #aad4ff;
+  color: var(--accent1-color);
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 footer a:hover {
+  color: var(--highlight-color);
   text-decoration: underline;
 }
+
 .hero {
   position: relative;
+  overflow: hidden;
 }
 
 .hero img {
@@ -111,10 +163,13 @@ footer a:hover {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
+  opacity: 0.85;
   background-color: var(--accent1-color);
   color: #fff;
+  font-family: var(--heading-font);
+  font-size: 2rem;
 }
+
 .hero article {
   position: absolute;
   top: 25%;
@@ -128,7 +183,60 @@ footer a:hover {
   max-width: 1000px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
+
 .hero article img {
   float: right;
   width: 125px;
+  margin-left: 1rem;
+}
+
+.adventure-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  margin: 20px auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  border: 1px solid var(--accent1-color);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.adventure-gallery figure {
+  flex: 1 1 calc(20% - 10px);
+  margin: 0;
+  background-color: var(--accent1-color);
+  padding: 10px 5px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.adventure-gallery figure:hover {
+  transform: scale(1.03);
+}
+
+.adventure-gallery {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 8px;
+  font-weight: bold;
+  color: var(--highlight-color);
+  font-size: 0.9rem;
+  text-transform: capitalize;
+}
+
+.adventure-section {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.adventure-section h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  margin-bottom: 20px;
 }
