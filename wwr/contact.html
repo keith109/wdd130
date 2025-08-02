@@ -23,14 +23,95 @@
 
   <main>
     <h1>Contact Us</h1>
-    <p>Need help? Want to book a trip? Reach out to us via email or phone!</p>
-    <p>Email: info@therapids.com</p>
-    <p>Phone: +1 (800) 555-RAFT</p>
+      <section>
+        <h2>Meet Our Team</h2>
+        <div class="employee-gallery">
+          <div class="employee">
+            <img src="images/luciana-keep.jpg" alt="Luciana Keep - Lead Guide"  />
+            <p><strong>Luciana Keep</strong><br>Lead Guide</p>
+          </div>
+          <div class="employee">
+            <img src="images/keith-reservation.jpg" alt="Keith Hartcourt - Reservation Specialist" />
+            <p><strong>Keith Hartcourt</strong><br>Reservation Specialist</p>
+          </div>
+          <div class="employee">
+            <img src="images/marcelo-antelayen.png" alt="Marcelo Antelayen - Customer Experience Manager" />
+            <p><strong>Marcelo Antelayen</strong><br>Customer Experience Manager</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Company information</h2>
+        <p><strong>Address:</strong> 1830 Cajon del Maipo, Santiago de Chile, Chile </p>
+        <p><strong>Email:</strong> <a href="mailto:info@therapids.com">info@therapids.com</a></p>
+        <p><strong>Phone:</strong> +1 (800) 555-RAFT</p>
+      </section>
+
+      <section>
+        <h2>Find Us Here</h2>
+        <iframe
+          class="map-embed"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.1228530043554!2d-70.0813385!3d-33.6539785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967cd5c46b577c0d%3A0xd879db0321c2d8c1!2sCaj%C3%B3n%20del%20Maipo!5e0!3m2!1ses!2scl!4v1754116083874!5m2!1ses!2scl"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </section>
+
+      <section>
+        <h2>Send Us a Message</h2>
+        <form action="submit_contact.php" method="post">
+          <fieldset>
+            <legend>Your Contact Info</legend>
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+
+            <label for="useremail">Email Address:</label>
+            <input type="email" id="useremail" name="useremail" required>
+          </fieldset>
+
+          <fieldset>
+            <legend>Purpose of Your Message</legend>
+            <label for="purpose-general">
+              <input type="radio" id="purpose-general" name="purpose" value="general" required> General Inquiry
+            </label>
+            <label for="purpose-reservation">
+              <input type="radio" id="purpose-reservation" name="purpose" value="reservation"> Reservation Question
+            </label>
+            <label for="purpose-suggestion">
+              <input type="radio" id="purpose-suggestion" name="purpose" value="suggestion"> Website Suggestion
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Your Message</legend>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <label for="subscribe">
+              <input type="checkbox" id="subscribe" name="subscribe"> Please subscribe me to the monthly newsletter
+            </label>
+          </fieldset>
+
+          <button type="submit" class="submit-button">Send Your Message</button>
+        </form>
+      </section>
   </main>
 
   <footer>
-    <p>©2025 Gonzalo Segovia. All rights reserved.</p>
-    <p><a href="site-plan-rafting.html">Rafting Site Plan</a></p>
+    <p>©2025 The Rapids Gonzalo Segovia.</p>
+    <nav class="footer-nav">
+        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/facebook.webp" alt="Facebook Link">
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/twitter.webp" alt="Twitter Link">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+          <img src="images/instagram.webp" alt="Instagram Link">
+        </a>
+      </nav>
   </footer>
 </body>
 </html>
