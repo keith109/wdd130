@@ -13,23 +13,87 @@
 <body>
   <header>
     <img src="images/logo.jpg" alt="The Rapids Logo" width="120" />
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+            <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="trips.html">Trips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>  
+        </nav>
   </header>
 
   <main>
-    <h1>Welcome to The Rapids </h1>
-    <p>Adventure awaits! Explore our rafting trips and make memories that last a lifetime.</p>
-    <img src="images/logo.jpg" alt="Rafting Adventure" style="width: 100%; border-radius: 8px; margin-top: 1rem;" />
+    <div class="hero">
+          <img src="images/image2.jpg" alt="Rafting Hero Image">
+          <div class="hero-text">
+            <h1>Welcome to White Water Rafting Co!</h1>
+          </div>
+        </div>
+        
+     <section class="excursions-section">
+            <h2>You have to live it!!</h2>
+            <div class="excursions-gallery">
+              <figure>
+                <img src="images/rafting6.jpg" alt="happy rafters">
+                <figcaption>
+                    <strong>The calm of nature</strong><br>
+                    Come and experience our wonderful experiences on our routes for beginners.
+                </figcaption>    
+              </figure>
+              <figure>  
+                <img src="images/image3.jpg" alt="Rafting Hard">
+                <figcaption>
+                   <strong>Indelible memories.</strong><br>
+                   If you want to experience the thrill, this route is ideal for you, only for the most experienced!.
+                </figcaption>   
+              </figure>  
+            </div>   
+            
+            <div class="cta-section">
+                <h2>Wondering where to start?</h2>
+                <a class="cta-button" href="trips.html">Scout the rapids</a>
+            </div>
+         </section>  
+
+         <section class="newsletter">
+          <h2>Want more?</h2>
+          <p>Sign up for our newsletter</p>
+          <div class="newsletter-content">
+            <form action="#" method="post">
+                <fieldset>
+                 <legend>Contact Information</legend>
+                 <div class="form-item column2">
+                   <label for="fullname">Full name:</label>
+                   <input type="text" name="fullname" id="fullname" required>
+                 </div>
+
+                <div class="form-item column2">
+                   <label for="useremail">Email:</label>
+                   <input type="email" name="useremail" id="useremail" required>
+                </div>
+              </fieldset> 
+              <button type="submit">Yes, please!</button>
+            </form>
+          </div>
+        </section>
+
   </main>
 
-  <footer>
-    <p>©2025 Gonzalo Segovia. All rights reserved.</p>
+   <footer>
+    <p>©2025 The Rapids Gonzalo Segovia. All rights reserved.</p>
     <p><a href="site-plan-rafting.html">Rafting Site Plan</a></p>
+    <nav class="socialmedia">
+      <a href="https://facebook.com">
+        <img src="images/facebook.webp" alt="facebook icon">
+      </a>
+      <a href="https://instagram.com ">
+        <img src="images/instagram.webp" alt="instagram icon">
+      </a>
+      <a href="https://twitter.com">
+        <img src="images/twitter.webp" alt="twitter icon">
+      </a>
+    </nav>
   </footer>
 </body>
 </html>
